@@ -1,0 +1,1 @@
+{"version":3,"file":"carrier.service.d.ts","sourceRoot":"","sources":["../../src/carrier/carrier.service.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,OAAO,CAAC;AAEtC,OAAO,EAAE,cAAc,EAAE,MAAM,mBAAmB,CAAC;AAEnD,MAAM,CAAC,OAAO,OAAO,cAAc;IACjC,MAAM,EAAE,aAAa,CAAC;gBACV,MAAM,EAAE,aAAa;IAI3B,WAAW;IASX,UAAU,CAAC,cAAc,EAAE,cAAc;IAUzC,aAAa,CAAC,SAAS,EAAE,MAAM;CAStC"}
