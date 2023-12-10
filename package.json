@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lyricsking/shipday-ts.git",
+    "url": "https://github.com/lyricsking/shipday-ts.git"
   },
   "keywords": [
     "shipday",
@@ -33,7 +33,9 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "chai": "^4.3.6",
-    "mocha": "^10.0.0"
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
   }
 }

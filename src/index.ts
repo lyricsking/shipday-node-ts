@@ -17,7 +17,7 @@ export default class Shipday {
     this.onDemandService = new OnDemandService(this.axiosClient);
   }
 
-  // sayHello() {
-  //   return "shipday node sdk - v 1.1.0";
-  // }
+  sayHello() {
+    return "shipday node sdk - v 1.1.0";
+  }
 }
