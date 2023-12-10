@@ -1,37 +1,36 @@
-
 export type OrderRequest = {
-  orderId: number;
+  orderId?: number;
   orderNumber: string;
   customerName: string;
-  customerAddress: string;
+  customerAddress?: string;
   customerEmail: string;
   customerPhoneNumber: string;
   restaurantName: string;
-  restaurantAddress: string;
+  restaurantAddress?: string;
   restaurantPhoneNumber: string;
-  expectedDeliveryDate: string;
-  expectedPickupTime: string;
-  expectedDeliveryTime: string;
-  tax: number;
-  tips: number;
-  pickupLatitude: number;
-  pickupLongitude: number;
-  deliveryLatitude: number;
-  deliveryLongitude: number;
-  discountAmount: number;
-  deliveryFee: number;
-  orderCost: number;
-  pickupInstruction: string;
-  deliveryInstruction: string;
-  orderSource: string;
-  additionalId: string;
-  clientRestaurantId: number;
-  paymentOption: PaymentMethod;
-  cardType: CardType;
-  lastFour: string;
-  orderItems: OrderItem[];
-  pickupAddress: Address;
-  dropOffAddress: Address;
+  expectedDeliveryDate?: string;
+  expectedPickupTime?: string;
+  expectedDeliveryTime?: string;
+  tax?: number;
+  tips?: number;
+  pickupLatitude?: number;
+  pickupLongitude?: number;
+  deliveryLatitude?: number;
+  deliveryLongitude?: number;
+  discountAmount?: number;
+  deliveryFee?: number;
+  orderCost?: number;
+  pickupInstruction?: string;
+  deliveryInstruction?: string;
+  orderSource?: string;
+  additionalId?: string;
+  clientRestaurantId?: number;
+  paymentOption?: PaymentMethod;
+  cardType?: CardType;
+  lastFour?: string;
+  orderItems?: OrderItem[];
+  pickupAddress?: Address;
+  dropOffAddress?: Address;
 };
 
 export type OrderItem = {
@@ -42,14 +41,14 @@ export type OrderItem = {
   detail?: string;
 };
 
-export default interface Address {
+export type Address = {
   unit: string;
   street: string;
   city: string;
   state: string;
   zip: string;
   country: string;
-}
+};
 
 export const CardType = {
   VISA: "visa",
@@ -80,9 +79,9 @@ export const PaymentMethod = {
 export type PaymentMethod = typeof PaymentMethod;
 
 export type OrderQuery = {
-  startTime: Date;
-  endTime: Date;
-  orderStatus: OrderState;
-  startCursor: number;
-  endCursor: number;
+  startTime?: Date;
+  endTime?: Date;
+  orderStatus?: OrderState;
+  startCursor?: number;
+  endCursor?: number;
 };
