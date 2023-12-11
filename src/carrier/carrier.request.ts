@@ -1,5 +1,5 @@
-export type CarrierRequest={
-  name : string;
-  email : string;
-  phoneNumber : string;
-}
+export type CarrierRequest = {
+  name: string;
+  email: string;
+  phoneNumber: string;
+};

@@ -51,7 +51,7 @@ export default class OnDemandDeliveryService {
     }
   }
 
-  async getDetails(orderId: number) {
+  async getDetails(orderId: string) {
     try {
       const response = await this.client.get(`on-demand/details/${orderId}`);
       return response.data;
@@ -60,7 +60,7 @@ export default class OnDemandDeliveryService {
     }
   }
 
-  async cancelAssignment(orderId: number) {
+  async cancelAssignment(orderId: string) {
     try {
       const response = await this.client.post(`on-demand/cancel/${orderId}`);
       return response.data;

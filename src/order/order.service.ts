@@ -90,22 +90,33 @@ export default class OrderService {
 
   getOrderRequestBody(order: OrderRequest) {
     if (!order.orderNumber) throw new Error("order number required");
+
     if (!order.customerName || typeof order.customerName !== "string")
       throw new Error("invalid customer name");
-    if (!order.customerAddress || typeof order.customerAddress !== "string")
+
+    if (order.customerAddress || typeof order.customerAddress !== "string")
       throw new Error("invalid customer address");
+
+    if (!order.customerAddress && !order.dropOffAddress)
+      throw new Error("A valid customer address must be provided");
+
     if (!order.customerEmail || typeof order.customerEmail !== "string")
       throw new Error("invalid customer email");
+
     if (
       !order.customerPhoneNumber ||
       typeof order.customerPhoneNumber !== "string"
     )
       throw new Error("invalid customer phone number");
+
     if (!order.restaurantName || typeof order.restaurantName !== "string")
       throw new Error("invalid restaurant name");
 
-    if (!order.restaurantAddress || typeof order.restaurantAddress !== "string")
+    if (order.restaurantAddress || typeof order.restaurantAddress !== "string")
       throw new Error("invalid restaurant address");
+
+    if (!order.restaurantAddress && !order.pickupAddress)
+      throw new Error("A valid pickup address must be provided");
 
     if (
       order.expectedDeliveryDate &&
@@ -140,11 +151,13 @@ export default class OrderService {
 
     if (order.pickupLatitude && !isLatitude(order.pickupLatitude))
       throw new Error("pickup latitude is invalid");
+
     if (order.pickupLongitude && !isLongitude(order.pickupLongitude))
       throw new Error("pickup longitude is invalid");
 
     if (order.deliveryLatitude && !isLatitude(order.deliveryLatitude))
       throw new Error("delivery latitude is invalid");
+
     if (order.deliveryLongitude && !isLongitude(order.deliveryLongitude))
       throw new Error("delivery longitude is invalid");
 
