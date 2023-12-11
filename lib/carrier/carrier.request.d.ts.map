@@ -1,1 +1,1 @@
-{"version":3,"file":"carrier.request.d.ts","sourceRoot":"","sources":["../../src/carrier/carrier.request.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,cAAc,GAAC;IACzB,IAAI,EAAG,MAAM,CAAC;IACd,KAAK,EAAG,MAAM,CAAC;IACf,WAAW,EAAG,MAAM,CAAC;CACtB,CAAA"}
+{"version":3,"file":"carrier.request.d.ts","sourceRoot":"","sources":["../../src/carrier/carrier.request.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,cAAc,GAAG;IAC3B,IAAI,EAAE,MAAM,CAAC;IACb,KAAK,EAAE,MAAM,CAAC;IACd,WAAW,EAAE,MAAM,CAAC;CACrB,CAAC"}
