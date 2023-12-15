@@ -94,7 +94,7 @@ export default class OrderService {
     if (!order.customerName || typeof order.customerName !== "string")
       throw new Error("invalid customer name");
 
-    if (order.customerAddress && typeof order.customerAddress !== "string")
+    if (order.customerAddress || typeof order.customerAddress !== "string")
       throw new Error("invalid customer address");
 
     if (!order.customerAddress && !order.dropOffAddress)
@@ -112,7 +112,7 @@ export default class OrderService {
     if (!order.restaurantName || typeof order.restaurantName !== "string")
       throw new Error("invalid restaurant name");
 
-    if (order.restaurantAddress && typeof order.restaurantAddress !== "string")
+    if (order.restaurantAddress || typeof order.restaurantAddress !== "string")
       throw new Error("invalid restaurant address");
 
     if (!order.restaurantAddress && !order.pickupAddress)
@@ -148,22 +148,6 @@ export default class OrderService {
     const isLongitude = (lng: number) => {
       return isFinite(lng) && Math.abs(lng) <= 180;
     };
-
-    if (
-      !order.restaurantAddress &&
-      (!order.pickupLatitude || !order.pickupLongitude)
-    )
-      throw new Error(
-        "Either of restaurantAddress or pickup latitude/longitude is invalid",
-      );
-
-    if (
-      !order.customerAddress &&
-      (!order.deliveryLatitude || !order.deliveryLongitude)
-    )
-      throw new Error(
-        "Either of customerAddress or delivery latitude/longitude is invalid",
-      );
 
     if (order.pickupLatitude && !isLatitude(order.pickupLatitude))
       throw new Error("pickup latitude is invalid");
