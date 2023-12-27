@@ -28,7 +28,7 @@ export type OrderRequest = {
   paymentOption?: PaymentMethod;
   cardType?: CardType;
   lastFour?: string;
-  orderItems?: OrderItem[];
+  orderItem?: OrderItem[];
   pickupAddress?: Address;
   dropOffAddress?: Address;
 };

@@ -197,7 +197,7 @@ export default class OrderService {
       );
     }
 
-    if (order.orderItems && order.orderItems.constructor === Array) {
+    if (order.orderItem && Array.isArray(order.orderItem)) {
       throw new Error("invalid Order items provided.");
     }
 
@@ -218,7 +218,7 @@ export default class OrderService {
       pickupLongitude: order.pickupLongitude,
       deliveryLatitude: order.deliveryLatitude,
       deliveryLongitude: order.deliveryLongitude,
-      orderItem: order.orderItems,
+      orderItem: order.orderItem,
       tips: order.tips,
       tax: order.tax,
       discountAmount: order.discountAmount,
