@@ -2,7 +2,7 @@
   "name": "shipday-ts",
   "version": "0.0.1",
   "description": "Shipday API wrapper using typescript.",
-  "main": "lib/index.js",
+  "main": "lib/index",
   "scripts": {
     "test": "mocha --recursive || true"
   },
